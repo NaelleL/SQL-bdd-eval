@@ -7,3 +7,6 @@ SELECT prenom, nom FROM athlete JOIN participation ON athlete.id_athlete = parti
 3)
 SELECT athlete.prenom, athlete.nom, pays.nom FROM athlete, pays, participation WHERE athlete.id_pays = pays.id_pays AND athlete.id_athlete = participation.id_athlete AND athlete.id_athlete NOT IN (SELECT id_athlete FROM run);
 
+Bonus
+j’ai eu l’erreur “field ambigus” en erreur, parce que “nom” il est utilisé un peu partout, il faudrait pas juste mettre “nom” partout mais plutot “nom_pays”, “nom_athlete” comme ca on a pas besoin d’écrire athlete.nom ou pays.nom et ça limiterais les messages d’erreurs comme ça
+
