@@ -4,3 +4,6 @@
 2)
 SELECT prenom, nom FROM athlete JOIN participation ON athlete.id_athlete = participation.id_athlete GROUP BY athlete.id_athlete HAVING COUNT(*) >= 2;
 
+3)
+SELECT athlete.prenom, athlete.nom, pays.nom FROM athlete, pays, participation WHERE athlete.id_pays = pays.id_pays AND athlete.id_athlete = participation.id_athlete AND athlete.id_athlete NOT IN (SELECT id_athlete FROM run);
+
