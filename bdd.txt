@@ -1,0 +1,6 @@
+1)
+
+
+2)
+SELECT prenom, nom FROM athlete JOIN participation ON athlete.id_athlete = participation.id_athlete GROUP BY athlete.id_athlete HAVING COUNT(*) >= 2;
+
